@@ -1,12 +1,15 @@
 .poster {
     width: 100vw;
-    object-fit: cover;
+    background-size: cover;
+    background-color: $color-back;
 }
 
 #poster-1 {
+    background-image: url('/assets/kiloren-2x.jpg');
     height: 500px;
 }
 
 #poster-2 {
+    background-image: url('/assets/stormtroopers-2x.jpg');
     height: 250px;
 }
