@@ -1,0 +1,48 @@
+footer {
+    bottom: 0;
+    background-image: url('./../../assets/darthvader_2x.jpg');
+    background-position-x: center;
+    background-position-y: center;
+    color: $color-gris;
+    background-color: #181818;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    article {
+        padding-top: 5em;
+        padding-bottom: 5em;
+        
+        header {
+            text-align: center;
+        }
+
+        section {
+            padding-top: 3em;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            
+            a {
+                color: $color-gris;
+                line-height: 2.5em;
+                font-size: 12px;
+            }
+
+            div {
+                text-align: center;
+            }
+
+            div:last-child{
+                p {
+                    padding-bottom: 0.2em;
+                }
+
+                div {
+                    a:nth-child(2) {
+                        padding: 0 2.3em;
+                    }
+                }
+            }
+        }
+    }
+
+}

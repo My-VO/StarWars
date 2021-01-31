@@ -1,0 +1,8 @@
+@import './base';
+@import './config/mixins',
+'./config/variables';
+@import './components/navigation',
+'./components/header',
+'./components/film',
+'./components/poster',
+'./components/footer';

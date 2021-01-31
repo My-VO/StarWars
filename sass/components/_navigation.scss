@@ -1,0 +1,28 @@
+.navigation {
+    background-color: $color-back;
+    opacity: 0.7;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: $height-navigation;
+
+    &__container {
+        margin: $padding-container;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &-link {
+            color: $color-white;
+            text-decoration: none;
+            list-style-type: none;
+            text-transform: uppercase;
+            
+            a {
+                font-weight: 800;
+            }
+        }
+    }
+}

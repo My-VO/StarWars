@@ -1,0 +1,51 @@
+.film {
+    padding: $padding-container;
+    &__container { 
+        p {
+            font-size: $font-size-18px;
+        }
+    }
+
+    &__ads {
+        padding-left: 75px;
+        img {
+            float: right;
+            position: -webkit-sticky;
+            position: sticky;
+            top: $height-navigation;
+        }
+    }
+
+    article {
+        header {
+            text-align: center;
+        }
+        section {
+            padding-top: 2em;
+            div:first-child {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 2em;
+                padding-bottom: 1em;
+            }
+        }
+        p, li {
+            line-height: 1.7;
+            padding-top: 0;
+            list-style-type: none;
+        }
+    }
+}
+
+
+#presentation-1 {
+    padding-top: $distance;
+    padding-bottom: $distance;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+}
+
+#presentation-2 {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
