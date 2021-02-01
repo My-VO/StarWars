@@ -1,8 +1,16 @@
 .film {
     padding: $padding-container;
+
+    @include media(phone) {
+        padding: $padding-container-mobile;
+    }
     &__container { 
         p {
             font-size: $font-size-18px;
+        }
+
+        @include media(phone) {
+            text-align: center;
         }
     }
 
@@ -13,6 +21,10 @@
             position: -webkit-sticky;
             position: sticky;
             top: $height-navigation;
+        }
+
+        @include media(phone) {
+            display: none;
         }
     }
 
@@ -27,6 +39,13 @@
                 grid-template-columns: auto auto;
                 gap: 2em;
                 padding-bottom: 1em;
+
+                @include media(phone) {
+                    display: block;
+                    img {
+                        padding-bottom: 1em; 
+                    }
+                }
             }
         }
         p, li {
@@ -42,7 +61,13 @@
     padding-top: $distance;
     padding-bottom: $distance;
     display: grid;
-    grid-template-columns: 50% 50%; 
+    grid-template-columns: 50% 50%;
+
+    @include media(phone) {
+        display: block;
+        padding-top: $distance-mobile;
+        padding-bottom: $distance-mobile;
+    }
 }
 
 #presentation-2 {

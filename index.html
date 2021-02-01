@@ -9,29 +9,37 @@
 <body>
     <header class="header">
         <nav id="nav" class="navigation">
-            <ul class="navigation__container">
-                <li class="navigation__container-link">
-                    <a class="navigation__container-link link" href="#home">Le coté lumineux</a>
-                </li>
-                <li class="navigation__container-link">
-                    <a class="navigation__container-link link" href="#news">Le coté obscur</a>
-                </li>
-                <li class="navigation__container-link">
-                    <a class="navigation__container-link link" href="#contact">L’empire</a>
-                </li>
-                <li class="navigation__container-link">
-                    <a class="navigation__container-link link" href="#contact">Les droïdes</a>
-                </li>
-                <li class="navigation__container-link">
-                    <a class="navigation__container-link link" href="#contact">Les ewoks</a>
-                </li>
-                <li class="navigation__container-link">
-                    <a class="navigation__container-link link" href="#contact">Jabba le hutt</a>
-                </li>
-            </ul>
+            <a type="button" id="open-menu" onclick="openMenu()" class="navigation__menubtn">
+                <img class="navigation__menubtn__img" src="./assets/menu.png" alt="menu">
+            </a>
+            <div id="menu-phone" class="navigation__menu">
+                <a id="close-menu" class="navigation__menu__closebtn" href="javascript:void(0)" onclick="closeMenu()">
+                    <img src="./assets/close.png" alt="close">
+                </a>
+                <ul class="navigation__menu__container">
+                    <li class="navigation__menu__container-link">
+                        <a class="navigation__menu__container-link link" href="#">Le coté lumineux</a>
+                    </li>
+                    <li class="navigation__menu__container-link">
+                        <a class="navigation__menu__container-link link" href="#">Le coté obscur</a>
+                    </li>
+                    <li class="navigation__menu__container-link">
+                        <a class="navigation__menu__container-link link" href="#">L’empire</a>
+                    </li>
+                    <li class="navigation__menu__container-link">
+                        <a class="navigation__menu__container-link link" href="#">Les droïdes</a>
+                    </li>
+                    <li class="navigation__menu__container-link">
+                        <a class="navigation__menu__container-link link" href="#">Les ewoks</a>
+                    </li>
+                    <li class="navigation__menu__container-link">
+                        <a class="navigation__menu__container-link link" href="#">Jabba le hutt</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         
-        <img src="./assets/header.png" alt="Star Wars">
+        <img id="img-header" src="./assets/header.png" alt="Star Wars">
     </header>
     <main>
         <section id="presentation-1" class="film">
@@ -97,7 +105,7 @@
                     <br>
                     <a href="#">Privacy Policy</a>
                 </div>
-                <div>
+                <div id="follow">
                     <p>FOLLOW STAR WARS</p>
                     <div>
                         <a href="https://fr-fr.facebook.com/"><img src="./assets/icon_facebook.png" alt="facebook"></a>
@@ -109,6 +117,6 @@
         </article>
     </footer>
 
-    <script src=""></script>
+    <script src="/js/menu.js"></script>
 </body>
 </html>

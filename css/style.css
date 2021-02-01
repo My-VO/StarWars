@@ -31,29 +31,98 @@ image {
   width: 100%;
   top: 0;
   height: 3.9rem; }
-  .navigation__container {
-    margin: 0 8.7em;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .navigation__container-link {
-      color: #ffffff;
-      text-decoration: none;
-      list-style-type: none;
-      text-transform: uppercase; }
-      .navigation__container-link a {
-        font-weight: 800; }
+  .navigation__menubtn {
+    display: none; }
+  .navigation__menu {
+    height: 100%; }
+    .navigation__menu__closebtn {
+      display: none; }
+    .navigation__menu__container {
+      margin: 0 8.7em;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .navigation__menu__container-link {
+        color: #ffffff;
+        text-decoration: none;
+        list-style-type: none;
+        text-transform: uppercase; }
+        .navigation__menu__container-link a {
+          font-weight: 800; }
+      .navigation__menu__container-link:hover {
+        color: #9B9B9B; }
+      @media only screen and (max-width: 768px) {
+        .navigation__menu__container {
+          margin: 0 2.3em; } }
+  @media only screen and (max-width: 768px) {
+    .navigation {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 1.5em;
+      opacity: 1; }
+      .navigation__menu {
+        width: 0px;
+        position: fixed;
+        z-index: 1;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        color: #000000;
+        background-image: url("/assets/header-bg.png");
+        background-color: #000000;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px; }
+        .navigation__menu__closebtn {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          display: block; }
+        .navigation__menu__container {
+          display: none;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start; }
+          .navigation__menu__container-link {
+            color: #ffffff;
+            text-decoration: none;
+            list-style-type: none;
+            text-transform: uppercase;
+            padding-bottom: 40px;
+            transition: 0.3s; }
+            .navigation__menu__container-link a {
+              font-weight: 800;
+              font-size: 1.3em; }
+      .navigation__menubtn {
+        display: block; }
+        .navigation__menubtn__img {
+          cursor: pointer;
+          right: 20px; } }
 
 .header {
-  background-image: url("../../assets/header-bg-2x.png");
+  background-image: url("/assets/header-bg-2x.png");
   display: flex;
   justify-content: center; }
+  @media only screen and (max-width: 768px) {
+    .header #img-header {
+      object-fit: contain;
+      height: 400px;
+      width: auto;
+      padding: 4.5em 0; } }
 
 .film {
   padding: 0 8.7em; }
+  @media only screen and (max-width: 768px) {
+    .film {
+      padding: 0 2.3em; } }
   .film__container p {
     font-size: 18px; }
+  @media only screen and (max-width: 768px) {
+    .film__container {
+      text-align: center; } }
   .film__ads {
     padding-left: 75px; }
     .film__ads img {
@@ -61,6 +130,9 @@ image {
       position: -webkit-sticky;
       position: sticky;
       top: 3.9rem; }
+    @media only screen and (max-width: 768px) {
+      .film__ads {
+        display: none; } }
   .film article header {
     text-align: center; }
   .film article section {
@@ -70,6 +142,11 @@ image {
       grid-template-columns: auto auto;
       gap: 2em;
       padding-bottom: 1em; }
+      @media only screen and (max-width: 768px) {
+        .film article section div:first-child {
+          display: block; }
+          .film article section div:first-child img {
+            padding-bottom: 1em; } }
   .film article p, .film article li {
     line-height: 1.7;
     padding-top: 0;
@@ -80,6 +157,11 @@ image {
   padding-bottom: 8.7em;
   display: grid;
   grid-template-columns: 50% 50%; }
+  @media only screen and (max-width: 768px) {
+    #presentation-1 {
+      display: block;
+      padding-top: 2.3em;
+      padding-bottom: 2.3em; } }
 
 #presentation-2 {
   padding-top: 4em;
@@ -93,10 +175,18 @@ image {
 #poster-1 {
   background-image: url("/assets/kiloren-2x.jpg");
   height: 500px; }
+  @media only screen and (max-width: 768px) {
+    #poster-1 {
+      background-image: url("/assets/kiloren.jpg");
+      background-position: 50% 50%; } }
 
 #poster-2 {
   background-image: url("/assets/stormtroopers-2x.jpg");
   height: 250px; }
+  @media only screen and (max-width: 768px) {
+    #poster-2 {
+      background-image: url("/assets/stormtroopers.jpg");
+      background-position: 50% 50%; } }
 
 footer {
   bottom: 0;
@@ -107,24 +197,47 @@ footer {
   background-color: #181818;
   background-size: contain;
   background-repeat: no-repeat; }
+  @media only screen and (max-width: 768px) {
+    footer {
+      background-size: cover; } }
   footer article {
     padding-top: 5em;
     padding-bottom: 5em; }
+    @media only screen and (max-width: 768px) {
+      footer article {
+        padding-top: 0;
+        padding-bottom: 0; } }
     footer article header {
       text-align: center; }
+      @media only screen and (max-width: 768px) {
+        footer article header {
+          display: none; } }
     footer article section {
       padding-top: 3em;
       display: grid;
       grid-template-columns: repeat(3, 1fr); }
+      @media only screen and (max-width: 768px) {
+        footer article section {
+          padding: 2em 0;
+          grid-template-columns: none; }
+          footer article section #follow {
+            padding-top: 2.3em;
+            align-items: center; } }
       footer article section a {
         color: #9B9B9B;
         line-height: 2.5em;
         font-size: 12px; }
       footer article section div {
         text-align: center; }
-      footer article section div:last-child p {
+      footer article section div:nth-last-of-type(1) p {
         padding-bottom: 0.2em; }
-      footer article section div:last-child div a:nth-child(2) {
+      footer article section div:nth-last-of-type(1) div a:nth-child(2) {
         padding: 0 2.3em; }
+      @media only screen and (max-width: 768px) {
+        footer article section div:nth-last-of-type(1) {
+          grid-column: 1 / span 2;
+          display: flex;
+          justify-content: space-around;
+          text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */

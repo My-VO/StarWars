@@ -1,5 +1,14 @@
 .header {
-    background-image: url("../../assets/header-bg-2x.png");
+    background-image: url("/assets/header-bg-2x.png");
     display: flex;
     justify-content: center;
+
+    @include media(phone) {
+        #img-header {
+            object-fit: contain;
+            height: 400px;
+            width: auto;
+            padding: 4.5em 0;
+        }
+    }
 }

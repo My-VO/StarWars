@@ -8,18 +8,41 @@ footer {
     background-size: contain;
     background-repeat: no-repeat;
 
+    @include media(phone) {
+        background-size: cover;
+    }
+
     article {
         padding-top: 5em;
         padding-bottom: 5em;
+
+        @include media(phone) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
         
         header {
             text-align: center;
+
+            @include media(phone) {
+                display: none;
+            }
         }
 
         section {
             padding-top: 3em;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+
+            @include media(phone) {
+                padding: 2em 0;
+                grid-template-columns: none;
+
+                #follow {
+                    padding-top: $distance-mobile;
+                    align-items: center;
+                }
+            }
             
             a {
                 color: $color-gris;
@@ -31,7 +54,7 @@ footer {
                 text-align: center;
             }
 
-            div:last-child{
+            div:nth-last-of-type(1) {
                 p {
                     padding-bottom: 0.2em;
                 }
@@ -40,6 +63,13 @@ footer {
                     a:nth-child(2) {
                         padding: 0 2.3em;
                     }
+                }
+
+                @include media(phone) {
+                    grid-column: 1 / span 2;
+                    display: flex;
+                    justify-content: space-around;
+                    text-align: center;
                 }
             }
         }
