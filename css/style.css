@@ -65,7 +65,7 @@ image {
       .navigation__menu {
         width: 0px;
         position: fixed;
-        z-index: 1;
+        z-index: 99;
         height: 100vh;
         top: 0;
         right: 0;
@@ -105,12 +105,16 @@ image {
 .header {
   background-image: url("/assets/header-bg-2x.png");
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  background-size: cover;
+  background-position-x: center; }
+  .header #img-header {
+    object-fit: cover;
+    transform: translateY(0px); }
   @media only screen and (max-width: 768px) {
     .header #img-header {
-      object-fit: contain;
       height: 400px;
-      width: auto;
+      width: 100vw;
       padding: 4.5em 0; } }
 
 .film {
@@ -170,23 +174,23 @@ image {
 .poster {
   width: 100vw;
   background-size: cover;
-  background-color: #000000; }
+  background-color: #000000;
+  background-position: center; }
 
 #poster-1 {
   background-image: url("/assets/kiloren-2x.jpg");
-  height: 500px; }
+  height: 500px;
+  background-attachment: fixed; }
   @media only screen and (max-width: 768px) {
     #poster-1 {
-      background-image: url("/assets/kiloren.jpg");
-      background-position: 50% 50%; } }
+      background-image: url("/assets/kiloren.jpg"); } }
 
 #poster-2 {
   background-image: url("/assets/stormtroopers-2x.jpg");
   height: 250px; }
   @media only screen and (max-width: 768px) {
     #poster-2 {
-      background-image: url("/assets/stormtroopers.jpg");
-      background-position: 50% 50%; } }
+      background-image: url("/assets/stormtroopers.jpg"); } }
 
 footer {
   bottom: 0;

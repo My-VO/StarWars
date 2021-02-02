@@ -2,15 +2,16 @@
     width: 100vw;
     background-size: cover;
     background-color: $color-black;
+    background-position: center;
 }
 
 #poster-1 {
     background-image: url('/assets/kiloren-2x.jpg');
     height: 500px;
+    background-attachment: fixed;
 
     @include media(phone) {
         background-image: url('/assets/kiloren.jpg');
-        background-position: 50% 50%;
     }
 }
 
@@ -20,6 +21,5 @@
 
     @include media(phone) {
         background-image: url('/assets/stormtroopers.jpg');
-        background-position: 50% 50%;
     }
 }

@@ -2,12 +2,18 @@
     background-image: url("/assets/header-bg-2x.png");
     display: flex;
     justify-content: center;
+    background-size: cover;
+    background-position-x: center;
+
+    #img-header {
+        object-fit: cover;;
+        transform: translateY(0px);
+    }
 
     @include media(phone) {
         #img-header {
-            object-fit: contain;
             height: 400px;
-            width: auto;
+            width: 100vw;
             padding: 4.5em 0;
         }
     }
