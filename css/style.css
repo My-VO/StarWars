@@ -179,8 +179,7 @@ image {
 
 #poster-1 {
   background-image: url("/assets/kiloren-2x.jpg");
-  height: 500px;
-  background-attachment: fixed; }
+  height: 500px; }
   @media only screen and (max-width: 768px) {
     #poster-1 {
       background-image: url("/assets/kiloren.jpg"); } }
